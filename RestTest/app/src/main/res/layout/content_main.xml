@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:background="#E8F5E9">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D9EBE6"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".MainActivity"
+        tools:showIn="@layout/activity_main">
+
+        <Button
+            android:id="@+id/btnFetchDetails"
+            android:layout_width="255dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="78dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="78dp"
+            android:layout_marginBottom="96dp"
+            android:background="#3D85C6"
+            android:text="Fetch Details"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtStartingPoint" />
+
+        <EditText
+            android:id="@+id/txtUrl"
+            android:layout_width="375dp"
+            android:layout_height="108dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="42dp"
+            android:layout_weight="1"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="2000"
+            android:maxLines="4"
+            android:textColor="#2F2E30"
+            app:layout_constraintBottom_toTopOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.363"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="655dp" />
+
+        <Button
+            android:id="@+id/RidesPicker"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="#3D85C6"
+            android:text="Choose preferred rides"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/txtPreferredRides"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextCustomerId" />
+
+        <Button
+            android:id="@+id/StartingPointPicker"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="7dp"
+            android:background="#3D85C6"
+            android:text="Choose Starting Point"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/txtStartingPoint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPreferredRides" />
+
+        <TextView
+            android:id="@+id/txtPreferredRides"
+            android:layout_width="330dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="22dp"
+            android:text="TextView"
+            android:textColor="#CB686A6B"
+            app:layout_constraintBottom_toTopOf="@+id/StartingPointPicker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RidesPicker" />
+
+        <TextView
+            android:id="@+id/txtStartingPoint"
+            android:layout_width="330dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:text="TextView"
+            android:textColor="#C9626364"
+            app:layout_constraintBottom_toTopOf="@+id/btnFetchDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/StartingPointPicker" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="30dp"
+            android:background="#00C8E6C9"
+            android:gravity="center_vertical"
+            android:text="CUSTOMER ID"
+            android:textAlignment="center"
+            android:textColor="#2F2E30"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/RidesPicker"
+            app:layout_constraintEnd_toStartOf="@+id/editTextCustomerId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtUrl" />
+
+        <EditText
+            android:id="@+id/editTextCustomerId"
+            android:layout_width="200dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="49dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="17dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textColor="#2F2E30"
+            app:layout_constraintBottom_toTopOf="@+id/RidesPicker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/txtUrl" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
